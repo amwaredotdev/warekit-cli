@@ -110,12 +110,18 @@ running against a Lite checkout. `warekit info` prints it.
 
 ## 📦 Kits
 
-| Kit                                                                            | Edition | What you get                                                                   |
-| ------------------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------ |
-| [warekit-netsuite-lite](https://github.com/amwaredotdev/warekit-netsuite-lite) | Lite    | The full React-in-NetSuite architecture: SDF, both deploy modes, E2E, CI       |
-| warekit-netsuite (Pro)                                                         | Pro     | Adds licensing, role mapping, typed data layer, schema generator, admin center |
+| Kit                           | `kit`            | Edition | What you get                                                                   |
+| ----------------------------- | ---------------- | ------- | ------------------------------------------------------------------------------ |
+| `warekit-react-netsuite-lite` | `react-netsuite` | Lite    | The React-in-NetSuite architecture: SDF, both deploy modes, E2E, CI            |
+| `warekit-react-netsuite`      | `react-netsuite` | Pro     | Adds licensing, role mapping, typed data layer, schema generator, admin center |
 
 `warekit create` clones the Lite kit. Pro is in development.
+
+The framework is in the name because a Next.js kit is planned for **hybrid**
+SuiteApps — ones that run outside NetSuite and authenticate over OAuth 2
+against an integration record, rather than inside a Suitelet on the session
+cookie. That kit reports a different `kit` id, so the CLI can tell the two
+apart without inspecting the tree.
 
 ## 🤖 MCP server
 

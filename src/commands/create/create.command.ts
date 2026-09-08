@@ -1,7 +1,7 @@
 import { Command } from 'commander'
 import { log, pc } from '../../utils/logger.js'
 
-const KIT_REPO = 'https://github.com/amwaredotdev/warekit-netsuite-lite.git'
+const KIT_REPO = 'https://github.com/amwaredotdev/warekit-react-netsuite-lite.git'
 
 /**
  * `warekit create` — start a new project.
