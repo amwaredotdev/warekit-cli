@@ -118,10 +118,14 @@ running against a Lite checkout. `warekit info` prints it.
 `warekit create` clones the Lite kit. Pro is in development.
 
 The framework is in the name because a Next.js kit is planned for **hybrid**
-SuiteApps — ones that run outside NetSuite and authenticate over OAuth 2
-against an integration record, rather than inside a Suitelet on the session
-cookie. That kit reports a different `kit` id, so the CLI can tell the two
-apart without inspecting the tree.
+SuiteApps: a frontend on Vercel that reaches NetSuite from its API routes,
+over OAuth 2 for user sign-in or token-based auth for server-to-server calls,
+rather than running inside a Suitelet on the session cookie.
+
+Both kinds ship an SDF project and both are scaffolded by this CLI — the
+SuiteScript backend is the same work either way, and `warekit new` does not
+care where the frontend is hosted. The kits differ only in their `kit` id, so
+a kit-specific command can tell them apart without inspecting the tree.
 
 ## 🤖 MCP server
 
