@@ -14,14 +14,14 @@
     "suitescript"
   ],
   "homepage": "https://amware.dev",
+  "bugs": {
+    "url": "https://github.com/amwaredotdev/warekit-cli/issues"
+  },
   "license": "MIT",
   "author": "AMWARE",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amwaredotdev/warekit-cli.git"
-  },
-  "bugs": {
-    "url": "https://github.com/amwaredotdev/warekit-cli/issues"
   },
   "bin": {
     "warekit": "dist/index.mjs",
