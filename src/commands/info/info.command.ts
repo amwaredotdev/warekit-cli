@@ -13,7 +13,7 @@ export function infoCommand(): Command {
         log.info(`
   ${pc.bold('WareKit project')}  ${pc.dim(root)}
 
-    kit         ${manifest.kit} (${manifest.edition})${manifest.kitVersion ? ` @ ${manifest.kitVersion}` : ''}
+    kit         ${manifest.kit} (${manifest.edition})${manifest.kitVersion ? ` @ ${manifest.kitVersion}` : ''}${manifest.name ? `\n    name        ${manifest.name}` : ''}
     suiteapp    ${publisherId}.${projectId}
     prefix      ${scriptPrefix}_
     types       ${Object.keys(manifest.paths.scripting).join(', ')}

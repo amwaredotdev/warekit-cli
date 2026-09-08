@@ -34,6 +34,13 @@ export const ManifestSchema = z.object({
    */
   edition: z.enum(['lite', 'pro']).default('lite'),
 
+  /**
+   * Display name, e.g. "WareKit React NetSuite (Lite)". Optional: tooling
+   * that has to name the kit reads this instead of hardcoding one, because
+   * the same tooling files are shared between kits.
+   */
+  name: z.string().min(1).optional(),
+
   /** The kit release the project was created from, for update checks. */
   kitVersion: z.string().optional(),
 
@@ -163,7 +170,7 @@ export function resolvePaths(loaded: LoadedManifest, scriptType: string) {
 export function defaultManifest(identity: Manifest['identity']): Manifest {
   return {
     version: 1,
-    kit: 'netsuite',
+    kit: 'react-netsuite',
     edition: 'lite',
     identity,
     paths: {
