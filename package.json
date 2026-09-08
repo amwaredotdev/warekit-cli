@@ -1,0 +1,65 @@
+{
+  "name": "warekit",
+  "version": "0.1.0",
+  "description": "Scaffold and manage NetSuite apps built with WareKit. A Masterpiece Will Always Require Effort.",
+  "keywords": [
+    "cli",
+    "mcp",
+    "netsuite",
+    "restlet",
+    "scaffold",
+    "sdf",
+    "suitecloud",
+    "suitelet",
+    "suitescript"
+  ],
+  "homepage": "https://amware.dev",
+  "license": "MIT",
+  "author": "AMWARE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amwaredotdev/warekit-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amwaredotdev/warekit-cli/issues"
+  },
+  "bin": {
+    "warekit": "dist/index.mjs",
+    "warekit-mcp": "dist/mcp.mjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "test": "tsup --config tsup.test.config.ts --silent && node --test dist-test/*.test.mjs",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "commander": "^14.0.2",
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/prompts": "^2.4.9",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.33.0"
+}
